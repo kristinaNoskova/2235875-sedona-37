@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Кристина Носкова](https://up.htmlacademy.ru/htmlcss/37/user/2235875).
-* Наставник: `Неизвестно`.
+- Студент: [Кристина Носкова](https://up.htmlacademy.ru/htmlcss/37/user/2235875).
+- Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/id223468).
 
 ---
 

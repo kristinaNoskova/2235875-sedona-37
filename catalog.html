@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
 
   <body>
     <header class="page-header">
       <nav class="nav">
-        <a class="logo" href="#">
-          <img src="#" alt="Логотип">
+        <a class="logo" href="index.html">
+          <span class="visually-hidden">На главную страницу</span>
+          <img src="#" alt="Логотип сайта Седона">
         </a>
         <ul class="nav-list">
           <li class="nav-item">
@@ -31,16 +33,24 @@
             </a>
           </li>
         </ul>
-        <button class="nav-search" type="button">
-          <span class="visually-hidden">Поиск</span>
-        </button>
-        <a class="favorites-button" href="#">
-          <span class="visually-hidden">Избранное</span>
-          <span class="favorites-button__quantity">12</span>
-        </a>
-        <a class="choose-button" href="#">
-          Хочу сюда!
-        </a>
+        <ul class="nav-btn">
+          <li class="nav-btm__item">
+            <button class="nav-btm__search" type="button">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+          </li>
+          <li class="nav-btm__item">
+            <a class="nav-btm__favorites favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorites__quantity">12</span>
+            </a>
+          </li>
+          <li class="nav-btm__item">
+            <a class="nav-btm__choose" href="#">
+              Хочу сюда!
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -52,7 +62,7 @@
           <h1 class="catalog-hero__title">
             Гостиницы Седоны
           </h1>
-          <ul class="breadcrumbs">
+          <ol class="breadcrumbs">
             <li class="breadcrumbs__item">
               <a href="index.html" class="breadcrumbs__link">
                 <span class="visually-hidden">Главная</span>
@@ -63,30 +73,30 @@
                 Гостиницы
               </a>
             </li>
-          </ul>
+          </ol>
         </header>
 
         <!-- filter -->
         <h2 class="visually-hidden">Фильтр каталога</h2>
-        <form class="filter" action="https://echo.htmlacademy.ru/">
+        <form class="filter" method="post" action="https://echo.htmlacademy.ru/">
           <fieldset class="catalog-filter__group">
             <legend class="catalog-filter__title">Инфраструктура:</legend>
             <ul class="catalog-filter__list">
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="checkbox" name="pool" checked>
+                <label class="control" for="pool">
+                  <input class="control__input" id="pool" type="checkbox" name="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="checkbox" name="parking" checked>
+                <label class="control" for="parking">
+                  <input class="control__input" id="parking" type="checkbox" name="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="checkbox" name="wifi">
+                <label class="control" for="wifi">
+                  <input class="control__input" id="wifi" type="checkbox" name="wifi">
                   Wi-Fi
                 </label>
               </li>
@@ -98,20 +108,20 @@
             <legend class="catalog-filter__title">Тип Жилья:</legend>
             <ul class="catalog-filter__list">
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="radio" name="product-group" value="hotel" checked>
+                <label class="control" for="hotel">
+                  <input class="control__input" id="hotel" type="radio" name="product-group" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="radio" name="product-group" value="motel">
+                <label class="control" for="motel">
+                  <input class="control__input" id="motel" type="radio" name="product-group" value="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter__item">
-                <label class="control">
-                  <input class="control__input" type="radio" name="product-group" value="apartments">
+                <label class="control" for="apartments">
+                  <input class="control__input" id="apartments" type="radio" name="product-group" value="apartments">
                   Апартаменты
                 </label>
               </li>
@@ -122,14 +132,13 @@
             <legend class="catalog-filter__title">Стоимость, ₽:</legend>
             <input class="price-range" type="number" name="price-from" value="0">
             <input class="price-range" type="number" name="price-to" value="9000">
-            <!-- додобаить необходимые атрибуты для ползунка -->
-            <label>
-              <input class="toddler-range" type="range">
+            <label for="toddler">
+              <input class="toddler-range" type="range" id="toddler" name="toddler" min="0" max="9000">
             </label>
           </fieldset>
 
           <button class="show-button" type="submit">Применить</button>
-          <button class="reset-button" type="button">Сбросить</button>
+          <button class="reset-button" type="reset">Сбросить</button>
         </form>
       </section>
 
@@ -287,19 +296,7 @@
             <a href="#" class="pagination__link">4</a>
           </li>
           <li class="pagination__item">
-            <a href="#" class="pagination__link">5</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">6</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">7</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">8</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">9</a>
+            ...
           </li>
           <li class="pagination__item">
             <a href="#" class="pagination__link">10</a>
@@ -309,11 +306,11 @@
 
       <!-- subscribe -->
       <section class="subscribe subscribe-page" data-test="subscribe">
-        <h2 class="subscribe-title__dark title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-descr__dark descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/">
+        <h2 class="subscribe-title-dark title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-descr-dark descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
           <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
-          <input class="subscribe-button" type="submit" value="Подписаться">
+          <button class="subscribe-button" type="button">Подписаться</button>
         </form>
       </section>
     </main>
@@ -391,9 +388,7 @@
             d="M109.4 27.8232L105.8 18.9232H103.6L108.4 30.5232C108.1 31.4232 107.7 31.7232 106.7 31.7232H104.2V33.7232H106.7C108.5 33.7232 109.5 32.9232 110.2 31.1232L114.9 18.9232H112.8L109.4 27.8232Z"
             fill="black" />
         </svg>
-
       </a>
-
     </footer>
   </body>
 

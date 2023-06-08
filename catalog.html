@@ -13,8 +13,8 @@
     <header class="page-header">
       <nav class="nav">
         <a class="logo" href="index.html">
-          <span class="visually-hidden">На главную страницу</span>
-          <img src="#" alt="Логотип сайта Седона">
+          <span class="visually-hidden">Перейти на главную страницу</span>
+          <img src="images/logo.svg" alt="Логотип сайта Седона" width="140" height="70">
         </a>
         <ul class="nav-list">
           <li class="nav-item">
@@ -101,7 +101,6 @@
                 </label>
               </li>
             </ul>
-
           </fieldset>
 
           <fieldset class="catalog-filter__group">
@@ -130,8 +129,14 @@
 
           <fieldset class="catalog-filter__group">
             <legend class="catalog-filter__title">Стоимость, ₽:</legend>
-            <input class="price-range" type="number" name="price-from" value="0">
-            <input class="price-range" type="number" name="price-to" value="9000">
+            <label for="from">
+              <input class="price-range" type="number" name="price-from" id="from" value="0">
+              <span>от</span>
+            </label>
+            <label for="to">
+              <input class="price-range" type="number" name="price-to" id="to" value="9000">
+              <span>до</span>
+            </label>
             <label for="toddler">
               <input class="toddler-range" type="range" id="toddler" name="toddler" min="0" max="9000">
             </label>
@@ -173,7 +178,7 @@
 
         <ul class="catalog__list">
           <li class="catalog__item">
-            <img src="#" alt="описание">
+            <img src="images/catalog/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" width="300" height="212">
             <h3 class="catalog__title">
               Amara Resort & Spa
             </h3>
@@ -201,7 +206,7 @@
           </li>
 
           <li class="catalog__item">
-            <img src="#" alt="описание">
+            <img src="images/catalog/hotel-2.jpg" alt="Гостиница Villas at Poco Diablo" width="300" height="212">
             <h3 class="catalog__title">
               Villas at Poco Diablo
             </h3>
@@ -229,7 +234,7 @@
           </li>
 
           <li class="catalog__item">
-            <img src="#" alt="описание">
+            <img src="images/catalog/hotel-3.jpg" alt="Гостиница Desert Quail Inn" width="300" height="212">
             <h3 class="catalog__title">
               Desert Quail Inn
             </h3>
@@ -256,7 +261,7 @@
           </li>
 
           <li class="catalog__item">
-            <img src="#" alt="описание">
+            <img src="images/catalog/hotel-4.jpg" alt="Гостиница GreenTree Inn" width="300" height="212">
             <h3 class="catalog__title">
               GreenTree Inn
             </h3>
@@ -282,7 +287,7 @@
           </li>
         </ul>
 
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination__item">
             <a href="#" class="pagination__link pagination-current">1</a>
           </li>
@@ -301,7 +306,7 @@
           <li class="pagination__item">
             <a href="#" class="pagination__link">10</a>
           </li>
-        </ul>
+        </ol>
       </section>
 
       <!-- subscribe -->
@@ -309,7 +314,9 @@
         <h2 class="subscribe-title-dark title">Подпишитесь на рассылку</h2>
         <p class="subscribe-descr-dark descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-          <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
+          <label for="email">
+            <input class="subscribe-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+          </label>
           <button class="subscribe-button" type="button">Подписаться</button>
         </form>
       </section>

@@ -15,7 +15,7 @@
       <nav class="nav">
         <a class="logo" href="#">
           <span class="visually-hidden">Логотип сайта Седона</span>
-          <img src="#" alt="Логотип сайта Седона">
+          <img src="images/logo.svg" alt="Логотип сайта Седона" width="140" height="70">
         </a>
         <ul class="nav-list">
           <li class="nav-item">
@@ -34,16 +34,24 @@
             </a>
           </li>
         </ul>
-        <button class="nav-search" type="button">
-          <span class="visually-hidden">Поиск</span>
-        </button>
-        <a class="favorites-button" href="#">
-          <span class="visually-hidden">Избранное</span>
-          <span class="favorites-button__quantity">12</span>
-        </a>
-        <a class="choose-button" href="#">
-          Хочу сюда!
-        </a>
+        <ul class="nav-btn">
+          <li class="nav-btm__item">
+            <button class="nav-btm__search" type="button">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+          </li>
+          <li class="nav-btm__item">
+            <a class="nav-btm__favorites favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favorites__quantity">12</span>
+            </a>
+          </li>
+          <li class="nav-btm__item">
+            <a class="nav-btm__choose" href="#">
+              Хочу сюда!
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -53,20 +61,21 @@
 
       <!-- hero -->
       <section class="hero" data-test="hero">
-        <img src="#" alt="Фото Седоны">
-        <h2 class="hero-title title">Седона — небольшой городок в Аризоне,
-          заслуживающий большего!</h2>
-        <p class="hero-descr descr">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <img src="images/welcome.svg" alt="Добро пожаловать в Седону" width="458" height="352">
       </section>
 
       <!-- advantages -->
       <section class="advantages" data-test="advantages">
-        <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
+        <div class="advantages-text">
+          <h2 class="advantages-text__title title">Седона — небольшой городок в Аризоне,
+            заслуживающий большего!</h2>
+          <p class="advantages-text__descr descr">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
         <ul class="advantages-list">
           <li class="advantages-item">
             <h3 class="advantages-item__title subtitle text-light">Настоящий городок</h3>
             <p class="advantages-item__descr text-light">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="#" alt="Фото городка Седона">
+            <img src="images/advantages-city.jpg" alt="Фото городка Седона" width="800" height="385">
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item__title subtitle">Небольшая площадь</h3>
@@ -83,7 +92,7 @@
           <li class="advantages-item advantages-item__reverse">
             <h3 class="advantages-item__title subtitle text-light">Там есть мост дьявола</h3>
             <p class="advantages-item__descr text-light">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="#" alt="Фото каньона">
+            <img src="images/advantages-canyon.jpg" alt="Фото каньона" width="800" height="385">
           </li>
         </ul>
       </section>
@@ -133,7 +142,9 @@
         <h2 class="subscribe-title-light title">Подпишитесь на рассылку</h2>
         <p class="subscribe-descr-light descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-          <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
+          <label for="email">
+            <input class="subscribe-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+          </label>
           <button class="subscribe-button" type="button">Подписаться</button>
         </form>
       </section>

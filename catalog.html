@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <div class="page-container">
+    <div class="page-container">
+      <header class="page-header">
         <nav class="nav">
           <a class="logo nav-logo" href="index.html">
             <span class="visually-hidden">Перейти на главную страницу</span>
@@ -36,7 +36,7 @@
           </ul>
           <ul class="nav-btn list-reset">
             <li class="nav-btn__item">
-              <button class="nav-btn__search" type="button">
+              <button class="nav-btn__search btn" type="button">
                 <span class="visually-hidden">Поиск</span>
               </button>
             </li>
@@ -47,18 +47,16 @@
               </a>
             </li>
             <li class="nav-btn__item button-choose">
-              <a class="nav-btn__choose btn" href="#">
+              <button class="nav-btn__choose btn" type="button">
                 Хочу сюда!
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <!-- main-inner -->
-    <main class="main-inner main-container" data-test="main">
-      <div class="page-container">
+      <!-- main-inner -->
+      <main class="main-inner main-container" data-test="main">
         <!-- page-hero -->
         <section class="catalog-hero" data-test="filter">
           <header class="catalog-hero__header">
@@ -80,8 +78,8 @@
           </header>
 
           <!-- filter -->
-          <h2 class="visually-hidden">Фильтр каталога</h2>
           <form class="filter" method="post" action="https://echo.htmlacademy.ru/">
+            <h2 class="visually-hidden">Фильтр каталога</h2>
             <div class="filter-left">
               <fieldset class="catalog-filter__group">
                 <legend class="catalog-filter__title">Инфраструктура:</legend>
@@ -138,11 +136,11 @@
                 <legend class="catalog-filter__title">Стоимость, ₽:</legend>
                 <div class="price-group">
                   <label for="from" class="price-group__label">
-                    <input class="price-range" type="number" name="price-from" id="from" value="0">
+                    <input class="price-range input" type="number" name="price-from" id="from" value="0">
                     <span class="label-range">от</span>
                   </label>
                   <label for="to" class="price-group__label">
-                    <input class="price-range" type="number" name="price-to" id="to" value="9000">
+                    <input class="price-range input" type="number" name="price-to" id="to" value="9000">
                     <span class="label-range">до</span>
                   </label>
                 </div>
@@ -153,7 +151,7 @@
 
               <div class="form-button">
                 <button class="show-button btn" type="submit">Применить</button>
-                <button class="reset-button" type="reset">Сбросить</button>
+                <button class="reset-button btn" type="reset">Сбросить</button>
               </div>
             </div>
           </form>
@@ -161,12 +159,13 @@
 
         <!-- catalog -->
         <section class="catalog" data-test="catalog">
-          <div class="catalog-top">
+          <h2 class="visually-hidden">Каталог отелей</h2>
+          <header class="catalog-top">
             <p class="catalog-top__found">
               Найдено гостиниц:
               <span class="catalog-top__quantity">38</span>
             </p>
-            <select class="select-control" aria-label="Сортировка">
+            <select class="select-control input" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
             </select>
             <ul class="view list-reset">
@@ -186,12 +185,12 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </header>
 
 
           <ul class="catalog-list list-reset">
             <li class="catalog-item">
-              <a href="" class="catalog-item__link">
+              <a href="#" class="catalog-item__link">
                 <img src="images/catalog/amara.jpg" alt="Гостиница Amara Resort & Spa." width="300" height="212">
                 <h3 class="catalog__title">
                   Amara Resort & Spa
@@ -216,7 +215,7 @@
             </li>
 
             <li class="catalog-item">
-              <a href="" class="catalog-item__link">
+              <a href="#" class="catalog-item__link">
                 <img src="images/catalog/villas.jpg" alt="Гостиница Villas at Poco Diablo." width="300" height="212">
                 <h3 class="catalog__title">
                   Villas at Poco Diablo
@@ -241,7 +240,7 @@
             </li>
 
             <li class="catalog-item">
-              <a href="" class="catalog-item__link">
+              <a href="#" class="catalog-item__link">
                 <img src="images/catalog/desert.jpg" alt="Гостиница Desert Quail Inn." width="300" height="212">
                 <h3 class="catalog__title">
                   Desert Quail Inn
@@ -266,7 +265,7 @@
             </li>
 
             <li class="catalog-item">
-              <a href="" class="catalog-item__link">
+              <a href="#" class="catalog-item__link">
                 <img src="images/catalog/greentree.jpg" alt="Гостиница GreenTree Inn." width="300" height="212">
                 <h3 class="catalog__title">
                   GreenTree Inn
@@ -319,16 +318,14 @@
           <p class="subscribe-page__descr descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label for="email">
-              <input class="subscribe-form__input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+              <input class="subscribe-form__input input" type="email" name="email" id="email" placeholder="Ваш e-mail">
             </label>
-            <button class="subscribe-form__button" type="button">Подписаться</button>
+            <button class="subscribe-form__button btn" type="button">Подписаться</button>
           </form>
         </section>
-      </div>
-    </main>
+      </main>
 
-    <!-- footer -->
-    <div class="page-container">
+      <!-- footer -->
       <footer class="main-footer footer-container" data-test="footer">
         <ul class="social-list list-reset">
           <li class="social-item">

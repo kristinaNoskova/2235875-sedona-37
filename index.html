@@ -10,9 +10,10 @@
   </head>
 
   <body class="page">
-    <!-- header -->
-    <header class="main-header" data-test="header">
-      <div class="page-container">
+    <div class="page-container">
+      <!-- header -->
+      <header class="main-header" data-test="header">
+
         <nav class="nav">
           <a class="logo nav-logo" href="#">
             <span class="visually-hidden">Логотип сайта Седона</span>
@@ -37,7 +38,7 @@
           </ul>
           <ul class="nav-btn list-reset">
             <li class="nav-btn__item">
-              <button class="nav-btn__search" type="button">
+              <button class="nav-btn__search btn" type="button">
                 <span class="visually-hidden">Поиск</span>
               </button>
             </li>
@@ -48,18 +49,16 @@
               </a>
             </li>
             <li class="nav-btn__item button-choose">
-              <a class="nav-btn__choose btn" href="#">
+              <button class="nav-btn__choose btn" type="button">
                 Хочу сюда!
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <!-- main -->
-    <main class="main main-container" data-test="main">
-      <div class="page-container">
+      <!-- main -->
+      <main class="main main-container" data-test="main">
         <h1 class="visually-hidden">Туры в город Седона</h1>
 
         <!-- hero -->
@@ -149,16 +148,14 @@
           <p class="subscribe-descr__light descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label for="email">
-              <input class="subscribe-form__input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+              <input class="subscribe-form__input input" type="email" name="email" id="email" placeholder="Ваш e-mail">
             </label>
-            <button class="subscribe-form__button" type="button">Подписаться</button>
+            <button class="subscribe-form__button btn" type="button">Подписаться</button>
           </form>
         </section>
-      </div>
-    </main>
+      </main>
 
-    <!-- footer -->
-    <div class="page-container">
+      <!-- footer -->
       <footer class="main-footer footer-container" data-test="footer">
         <ul class="social-list list-reset">
           <li class="social-item">

@@ -64,6 +64,7 @@
 
         <!-- hero -->
         <section class="hero" data-test="hero">
+          <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
           <img src="images/welcome.svg" alt="Добро пожаловать в Седону." width="458" height="352">
         </section>
 
@@ -107,7 +108,7 @@
         </section>
 
         <!-- services -->
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="services-content">
             <h2 class="services-content__title title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="services-content__descr descr">Опытный персонал и качественное обслуживание!</p>
@@ -190,38 +191,42 @@
             </button>
           </div>
           <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
-            <label for="arrival" class="modal-form__label modal-form__arrival">
+            <label for="arrival" class="modal-form__label label-arrival">
               <span class="modal-form__text">Дата заезда:</span>
               <input type="text" name="arrival" id="arrival" class="modal-form__input" value="27 апреля 2020"
                 placeholder="Укажите дату">
               <span class="input-invalid">Мы не можем отправить вас в прошлое.</span>
             </label>
-            <label for="departure" class="modal-form__label modal-form__departure">
+            <label for="departure" class="modal-form__label label-departure">
               <span class="modal-form__text">Дата выезда:</span>
               <input type="text" name="departure" id="departure" class="modal-form__input" value="1 сентября 2023"
                 placeholder="Укажите дату">
               <span class="input-valid">На эти даты есть свободные номера. Пока есть.</span>
             </label>
             <div class="form-wrapper">
-              <label for="adult" class="modal-form__label modal-form__adult">
-                <span class="modal-form__text">Взрослые:</span>
-                <button class="modal-form__btn modal-form__minus" type="button">
+              <div class="wrapper-label">
+                <label for="adult" class="modal-form__label label-adult">
+                  <span class="modal-form__text">Взрослые:</span>
+                </label>
+                <button class="modal-form__btn button-minus" type="button">
                   <svg width="14" height="2" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z" />
                   </svg>
                   <span class="visually-hidden">Уменьшить количество человек</span>
                 </button>
-                <input type="number" name="adult" id="adult" class="modal-form__input modal-form__count" value="2">
-                <button class="modal-form__btn modal-form__plus" type="button">
+                <input type="number" name="adult" id="adult" class="modal-form__input input-count" value="2">
+                <button class="modal-form__btn button-plus" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                   </svg>
                   <span class="visually-hidden">Увеличить количество человек</span>
                 </button>
-              </label>
-              <label for="child" class="modal-form__label modal-form__child">
+              </div>
+              <div class="wrapper-label wrapper-label__child">
                 <span class="tooltip-container">
-                  <span class="modal-form__text">Дети:</span>
+                  <label for="child" class="modal-form__label">
+                    <span class="modal-form__text">Дети:</span>
+                  </label>
                   <span class="tooltip">
                     <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                     </button>
@@ -229,20 +234,20 @@
                       будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                   </span>
                 </span>
-                <button class="modal-form__btn modal-form__minus" type="button">
+                <button class="modal-form__btn button-minus" type="button">
                   <svg width="14" height="2" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L0 2L14 2V0L0 0Z" />
                   </svg>
                   <span class="visually-hidden">Уменьшить количество человек</span>
                 </button>
-                <input type="number" name="child" id="child" class="modal-form__input modal-form__count" value="2">
-                <button class="modal-form__btn modal-form__plus" type="button">
+                <input type="number" name="child" id="child" class="modal-form__input input-count" value="2">
+                <button class="modal-form__btn button-plus" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                   </svg>
                   <span class="visually-hidden">Увеличить количество человек</span>
                 </button>
-              </label>
+              </div>
             </div>
             <button class="modal-form__search btn" type="submit">Найти</button>
           </form>

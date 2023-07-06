@@ -59,9 +59,9 @@
       </header>
 
       <!-- modal -->
-      <div class="modal-container modal-container-close">
-        <div class="modal modal-booking">
-          <section class="modal-content" data-test="modal">
+      <div class="modal-container">
+        <div class="modal modal-booking" data-test="modal">
+          <section class="modal-content">
             <div class="modal-content__top">
               <h2 class="modal-content__title subtitle">Поиск гостиницы в Седоне</h2>
               <button class="modal-content__close">
@@ -70,21 +70,21 @@
             </div>
             <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
               <label for="arrival" class="modal-form__label label-arrival">
-                <span class="modal-form__text">Дата заезда:</span>
+                <span class="modal-form__text text-size">Дата заезда:</span>
                 <input type="text" name="arrival" id="arrival" class="modal-form__input" value="27 апреля 2020"
                   placeholder="Укажите дату">
-                <span class="input-invalid">Мы не можем отправить вас в прошлое.</span>
+                <span class="date-state input-invalid">Мы не можем отправить вас в прошлое.</span>
               </label>
               <label for="departure" class="modal-form__label label-departure">
-                <span class="modal-form__text">Дата выезда:</span>
+                <span class="modal-form__text text-size">Дата выезда:</span>
                 <input type="text" name="departure" id="departure" class="modal-form__input" value="1 сентября 2023"
                   placeholder="Укажите дату">
-                <span class="input-valid">На эти даты есть свободные номера. Пока есть.</span>
+                <span class="date-state input-valid">На эти даты есть свободные номера. Пока есть.</span>
               </label>
               <div class="form-wrapper">
                 <div class="wrapper-label">
                   <label for="adult" class="modal-form__label label-adult">
-                    <span class="modal-form__text">Взрослые:</span>
+                    <span class="modal-form__text text-size">Взрослые:</span>
                   </label>
                   <button class="modal-form__btn button-minus" type="button">
                     <svg width="14" height="2" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="wrapper-label wrapper-label__child">
                   <span class="tooltip-container">
-                    <label for="child" class="modal-form__label">
+                    <label for="child" class="modal-form__label label-child">
                       <span class="modal-form__text">Дети:</span>
                     </label>
                     <span class="tooltip">

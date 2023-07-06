@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
@@ -115,7 +116,6 @@
           </div>
           <ul class="services-list list-reset">
             <li class="services-item services-item__housing">
-
               <h3 class="services-item__subtitle subtitle">Жильё</h3>
               <p class="services-item__descr descr-item">Рекомендуем пожить<br> в настоящем мотеле,
                 <br>всё как в кино!
@@ -176,81 +176,6 @@
         <a href="https://htmlacademy.ru/" class="logo-academy">
         </a>
       </footer>
-    </div>
-
-    <!-- modal -->
-    <div class="modal-container modal-container-close">
-      <div class="modal modal-booking">
-        <section class="modal-content">
-          <div class="modal-content__top">
-            <h2 class="modal-content__title subtitle">Поиск гостиницы в Седоне</h2>
-            <button class="modal-content__close">
-              <span class="visually-hidden">Закрыть</span>
-            </button>
-          </div>
-          <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
-            <label for="arrival" class="modal-form__label label-arrival">
-              <span class="modal-form__text">Дата заезда:</span>
-              <input type="text" name="arrival" id="arrival" class="modal-form__input" value="27 апреля 2020"
-                placeholder="Укажите дату">
-              <span class="input-invalid">Мы не можем отправить вас в прошлое.</span>
-            </label>
-            <label for="departure" class="modal-form__label label-departure">
-              <span class="modal-form__text">Дата выезда:</span>
-              <input type="text" name="departure" id="departure" class="modal-form__input" value="1 сентября 2023"
-                placeholder="Укажите дату">
-              <span class="input-valid">На эти даты есть свободные номера. Пока есть.</span>
-            </label>
-            <div class="form-wrapper">
-              <div class="wrapper-label">
-                <label for="adult" class="modal-form__label label-adult">
-                  <span class="modal-form__text">Взрослые:</span>
-                </label>
-                <button class="modal-form__btn button-minus" type="button">
-                  <svg width="14" height="2" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
-                  </svg>
-                  <span class="visually-hidden">Уменьшить количество человек</span>
-                </button>
-                <input type="number" name="adult" id="adult" class="modal-form__input input-count" value="2">
-                <button class="modal-form__btn button-plus" type="button">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
-                  </svg>
-                  <span class="visually-hidden">Увеличить количество человек</span>
-                </button>
-              </div>
-              <div class="wrapper-label wrapper-label__child">
-                <span class="tooltip-container">
-                  <label for="child" class="modal-form__label">
-                    <span class="modal-form__text">Дети:</span>
-                  </label>
-                  <span class="tooltip">
-                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                    </button>
-                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
-                      будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                  </span>
-                </span>
-                <button class="modal-form__btn button-minus" type="button">
-                  <svg width="14" height="2" viewBox="0 0 14 2" fill="#756157" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
-                  </svg>
-                  <span class="visually-hidden">Уменьшить количество человек</span>
-                </button>
-                <input type="number" name="child" id="child" class="modal-form__input input-count" value="2">
-                <button class="modal-form__btn button-plus" type="button">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#756157" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
-                  </svg>
-                  <span class="visually-hidden">Увеличить количество человек</span>
-                </button>
-              </div>
-            </div>
-            <button class="modal-form__search btn" type="submit">Найти</button>
-          </form>
-        </section>
-      </div>
     </div>
   </body>
 

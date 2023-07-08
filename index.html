@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
@@ -63,6 +65,7 @@
 
         <!-- hero -->
         <section class="hero" data-test="hero">
+          <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
           <img src="images/welcome.svg" alt="Добро пожаловать в Седону." width="458" height="352">
         </section>
 
@@ -106,27 +109,24 @@
         </section>
 
         <!-- services -->
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="services-content">
             <h2 class="services-content__title title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="services-content__descr descr">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="services-list list-reset">
-            <li class="services-item">
-              <span class="services-item__housing services-item__icon"></span>
+            <li class="services-item services-item__housing">
               <h3 class="services-item__subtitle subtitle">Жильё</h3>
               <p class="services-item__descr descr-item">Рекомендуем пожить<br> в настоящем мотеле,
                 <br>всё как в кино!
               </p>
             </li>
-            <li class="services-item">
-              <span class="services-item__food services-item__icon"></span>
+            <li class="services-item services-item__food">
               <h3 class="services-item__subtitle subtitle">Еда</h3>
               <p class="services-item__descr descr-item">Всегда заказывайте<br>
                 топовый фирменный бургер,<br> вы не разочаруетесь!</p>
             </li>
-            <li class="services-item">
-              <span class="services-item__souvenirs services-item__icon"></span>
+            <li class="services-item services-item__souvenirs">
               <h3 class="services-item__subtitle subtitle">Сувениры</h3>
               <p class="services-item__descr descr-item">Не только китайского,<br>
                 но и настоящего местного<br> производства!</p>

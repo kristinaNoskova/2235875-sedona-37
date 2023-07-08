@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
@@ -85,20 +86,23 @@
               <ul class="catalog-filter__list list-reset">
                 <li class="catalog-filter__item">
                   <label class="control" for="pool">
-                    <input class="control__input" id="pool" type="checkbox" name="pool" checked>
-                    Бассейн
+                    <input class="visually-hidden control__input" id="pool" type="checkbox" name="pool" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control" for="parking">
-                    <input class="control__input" id="parking" type="checkbox" name="parking" checked>
-                    Парковка
+                    <input class="visually-hidden control__input" id="parking" type="checkbox" name="parking" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control" for="wifi">
-                    <input class="control__input" id="wifi" type="checkbox" name="wifi">
-                    Wi-Fi
+                    <input class="visually-hidden control__input" id="wifi" type="checkbox" name="wifi">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -109,20 +113,26 @@
               <ul class="catalog-filter__list list-reset">
                 <li class="catalog-filter__item">
                   <label class="control" for="hotel">
-                    <input class="control__input" id="hotel" type="radio" name="product-group" value="hotel" checked>
-                    Гостиница
+                    <input class="visually-hidden control__input" id="hotel" type="radio" name="product-group"
+                      value="hotel" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control" for="motel">
-                    <input class="control__input" id="motel" type="radio" name="product-group" value="motel">
-                    Мотель
+                    <input class="visually-hidden control__input" id="motel" type="radio" name="product-group"
+                      value="motel">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter__item">
                   <label class="control" for="apartments">
-                    <input class="control__input" id="apartments" type="radio" name="product-group" value="apartments">
-                    Апартаменты
+                    <input class="visually-hidden control__input" id="apartments" type="radio" name="product-group"
+                      value="apartments">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -132,18 +142,30 @@
               <legend class="catalog-filter__title">Стоимость, ₽:</legend>
               <div class="price-group">
                 <label for="from" class="price-group__label">
-                  <input class="price-range input" type="number" name="price-from" id="from" value="0">
-                  <span class="label-range">от</span>
+                  <input class="price-group__range price-from" type="number" name="price-from" id="from" value="0">
+                  <span class="price-group__text">от</span>
                 </label>
                 <label for="to" class="price-group__label">
-                  <input class="price-range input" type="number" name="price-to" id="to" value="9000">
-                  <span class="label-range">до</span>
+                  <input class="price-group__range price-to" type="number" name="price-to" id="to" value="9000">
+                  <span class="price-group__text">до</span>
                 </label>
               </div>
-              <label for="toddler">
-                <input class="toddler-range" type="range" id="toddler" name="toddler" min="0" max="9000">
-              </label>
+
+              <div class="range">
+                <div class="range__scale">
+                  <div class="range__bar" style="left:0; width: 226px">
+                    <button class="range__toggle toggle__min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range__toggle toggle__max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </fieldset>
+
+
 
             <div class="form-button">
               <button class="show-button btn" type="submit">Применить</button>
@@ -160,9 +182,11 @@
               Найдено гостиниц:
               <span class="catalog-top__quantity">38</span>
             </p>
-            <select class="select-control input" aria-label="Сортировка">
-              <option value="cheap">Сначала дешевые</option>
-            </select>
+            <div class="select">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешевые</option>
+              </select>
+            </div>
             <ul class="view list-reset">
               <li class="view__item">
                 <a href="#" class="view__button view__card button-dark">

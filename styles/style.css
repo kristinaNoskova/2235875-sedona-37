@@ -26,9 +26,7 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -36,7 +34,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 .main-container {
@@ -44,8 +42,13 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -140,10 +143,19 @@ img {
   left: 70px;
   top: 0;
   width: 140px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .nav-logo:focus {
   outline: 2px solid #68a2ca;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-logo:active {
+  opacity: 0.6;
 }
 
 .nav-logo img {
@@ -153,7 +165,7 @@ img {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  width: 339px;
+  width: 460px;
   margin-right: auto;
 }
 
@@ -289,6 +301,7 @@ img {
 
 .nav-btn__choose:disabled {
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 /* hero */
@@ -305,7 +318,7 @@ img {
 
 /* advantages */
 .advantages-text {
-  width: 651px;
+  width: 700px;
   padding-top: 69px;
   padding-bottom: 69px;
   margin: 0 auto;
@@ -350,6 +363,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 102px 85px;
+  width: 400px;
   text-align: center;
   color: #ffffff;
 }
@@ -507,6 +521,7 @@ img {
 
 .hotel-search__button:disabled {
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 /* subscribe */
@@ -568,6 +583,7 @@ img {
 
 .subscribe-form__button:disabled {
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .subscribe-form__input {
@@ -1019,6 +1035,7 @@ input[type="number"] {
 
 .show-button:disabled {
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .reset-button {
@@ -1088,14 +1105,13 @@ input[type="number"] {
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: 70px;
-  width: 292px;
 }
 
 .select-control {
   padding: 12px 20px;
   padding-right: 40px;
-  width: 100%;
+  margin-right: 70px;
+  width: 292px;
   height: 49px;
   font: inherit;
   line-height: 21px;
@@ -1258,6 +1274,7 @@ input[type="number"] {
 
 .button-detail:disabled {
   background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .button-favorites {
@@ -1550,6 +1567,7 @@ input[type="number"] {
 
 .modal-form__input:focus {
   outline: 3px solid #83b3d3;
+  outline-offset: -3px;
   background-color: #e6e6e6;
 }
 
@@ -1581,7 +1599,7 @@ input[type="number"] {
 .input-count {
   padding: 14px 10px;
   width: 31px;
-  height: 100%;
+  height: 48px;
   border-radius: 0;
 }
 
@@ -1615,7 +1633,7 @@ input[type="number"] {
   justify-content: center;
   padding: 14px 10px;
   width: 40px;
-  height: 100%;
+  height: 48px;
   border: none;
   background-color: #f2f2f2;
   cursor: pointer;
@@ -1626,6 +1644,14 @@ input[type="number"] {
 .modal-form__btn:focus {
   outline: 3px solid #82b3d3;
   outline-offset: -3px;
+}
+
+.modal-form__btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.modal-form__btn:focus-visible {
+  outline: 3px solid #82b3d3;
 }
 
 .modal-form__btn:focus svg {
@@ -1671,6 +1697,11 @@ input[type="number"] {
 .modal-form__search:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #68a2ca;
+}
+
+.modal-form__search:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 /* tooltip */

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
@@ -55,7 +56,6 @@
           </ul>
         </nav>
       </header>
-
       <!-- main-inner -->
       <main class="main-inner main-container" data-test="main">
         <!-- page-hero -->
@@ -77,7 +77,6 @@
               </li>
             </ol>
           </header>
-
           <!-- filter -->
           <form class="filter" method="post" action="https://echo.htmlacademy.ru/">
             <h2 class="visually-hidden">Фильтр каталога</h2>
@@ -107,7 +106,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title">Тип Жилья:</legend>
               <ul class="catalog-filter__list list-reset">
@@ -137,7 +135,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="catalog-filter__group catalog-filter__price">
               <legend class="catalog-filter__title">Стоимость, ₽:</legend>
               <div class="price-group">
@@ -150,7 +147,6 @@
                   <span class="price-group__text">до</span>
                 </label>
               </div>
-
               <div class="range">
                 <div class="range__scale">
                   <div class="range__bar" style="left:0; width: 226px">
@@ -164,16 +160,12 @@
                 </div>
               </div>
             </fieldset>
-
-
-
             <div class="form-button">
               <button class="show-button btn" type="submit">Применить</button>
               <button class="reset-button btn" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
-
         <!-- catalog -->
         <section class="catalog" data-test="catalog">
           <h2 class="visually-hidden">Каталог отелей</h2>
@@ -182,11 +174,11 @@
               Найдено гостиниц:
               <span class="catalog-top__quantity">38</span>
             </p>
-            <div class="select">
-              <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешевые</option>
-              </select>
-            </div>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="cheap">Сначала дорогие</option>
+              <option value="cheap">Сначала популярные</option>
+            </select>
             <ul class="view list-reset">
               <li class="view__item">
                 <a href="#" class="view__button view__card button-dark">
@@ -228,7 +220,6 @@
                 Рейтинг: 8,5
               </p>
             </li>
-
             <li class="catalog-item">
               <a href="#" class="catalog-item__img">
                 <img src="images/catalog/villas.jpg" alt="Гостиница Villas at Poco Diablo." width="300" height="212">
@@ -242,14 +233,13 @@
               <p class="price-value descr-item">От 5000 ₽</p>
               <a href="#" class="button-detail btn">Подробнее</a>
               <button class="button-favorites btn in-favorites" type="button">в избранном</button>
-              <p class="stars stars-amara">
+              <p class="stars stars-villas">
                 <span class="visually-hidden">Четыре звезды</span>
               </p>
               <p class="rating-value">
                 Рейтинг: 9,2
               </p>
             </li>
-
             <li class="catalog-item">
               <a href="#" class="catalog-item__img">
                 <img src="images/catalog/desert.jpg" alt="Гостиница Desert Quail Inn." width="300" height="212">
@@ -263,14 +253,13 @@
               <p class="price-value descr-item">От 2500 ₽</p>
               <a href="#" class="button-detail btn">Подробнее</a>
               <button class="button-favorites btn" type="button">в избранное</button>
-              <p class="stars stars-amara">
+              <p class="stars stars-desert">
                 <span class="visually-hidden">Три звезды</span>
               </p>
               <p class="rating-value">
                 Рейтинг: 6,9
               </p>
             </li>
-
             <li class="catalog-item">
               <a href="#" class="catalog-item__img">
                 <img src="images/catalog/greentree.jpg" alt="Гостиница GreenTree Inn." width="300" height="212">
@@ -284,7 +273,7 @@
               <p class="price-value descr-item">От 1500 ₽</p>
               <a href="#" class="button-detail btn">Подробнее</a>
               <button class="button-favorites btn" type="button">в избранное</button>
-              <p class="stars stars-amara">
+              <p class="stars stars-greentree">
                 <span class="visually-hidden">Две звезды</span>
               </p>
               <p class="rating-value">
@@ -292,7 +281,6 @@
               </p>
             </li>
           </ul>
-
           <ol class="pagination list-reset">
             <li class="pagination__item">
               <a href="#" class="pagination__link pagination-current">1</a>
@@ -314,7 +302,6 @@
             </li>
           </ol>
         </section>
-
         <!-- subscribe -->
         <section class="subscribe-page" data-test="subscribe">
           <h2 class="subscribe-page__title title">Подпишитесь на рассылку</h2>
@@ -323,29 +310,32 @@
             <label for="email">
               <input class="subscribe-form__input input" type="email" name="email" id="email" placeholder="Ваш e-mail">
             </label>
-            <button class="subscribe-form__button btn" type="button">Подписаться</button>
+            <button class="subscribe-form__button btn" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
-
       <!-- footer -->
       <footer class="main-footer footer-container" data-test="footer">
         <ul class="social-list list-reset">
           <li class="social-item">
             <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Ссылка на группу вконтакте</span>
             </a>
           </li>
           <li class="social-item">
             <a class="social-link social-link-telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Сссылка на телеграм канал</span>
             </a>
           </li>
           <li class="social-item">
             <a class="social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Ссылка на ютуб канал</span>
             </a>
           </li>
         </ul>
         <a class="phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a href="https://htmlacademy.ru/" class="logo-academy">
+          <span class="visually-hidden">Ссылка на официальеый сайт HTML Academy</span>
         </a>
       </footer>
     </div>

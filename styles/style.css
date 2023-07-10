@@ -609,8 +609,12 @@ img {
   outline-offset: -3px;
 }
 
-.subscribe-form__input:hover {
+.subscribe-form__input:hover:not(:disabled) {
   background-color: #e6e6e6;
+}
+
+.subscribe-form__input:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 /* footer */
@@ -904,6 +908,10 @@ img {
   opacity: 0.3;
 }
 
+.control-input:disabled {
+  opacity: 0.3;
+}
+
 /* type="number" */
 .price-group {
   display: flex;
@@ -944,6 +952,10 @@ img {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
   outline-offset: -3px;
+}
+
+.price-group__range:disabled {
+  background-color: #dbdada;
 }
 
 .price-to {
@@ -1571,12 +1583,16 @@ input[type="number"] {
   background-color: #e6e6e6;
 }
 
-.modal-form__input:hover {
+.modal-form__input:hover:not(:disabled) {
   background-color: #e6e6e6;
 }
 
 .modal-form__input::placeholder {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-form__input:disabled {
+  opacity: 0.6;
 }
 
 .input-invalid {
@@ -1659,7 +1675,7 @@ input[type="number"] {
   fill-opacity: 1;
 }
 
-.modal-form__btn:hover svg {
+.modal-form__btn:hover:not(:disabled) svg {
   fill: #000000;
   fill-opacity: 1;
 }
@@ -1668,6 +1684,10 @@ input[type="number"] {
   fill: #756157;
   fill-opacity: 0.3;
   outline: none;
+}
+
+.modal-form__btn:disabled {
+  opacity: 0.6;
 }
 
 .button-plus {

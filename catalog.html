@@ -78,7 +78,7 @@
             </ol>
           </header>
           <!-- filter -->
-          <form class="filter" method="post" action="https://echo.htmlacademy.ru/">
+          <form class="catalog-filter" method="post" action="https://echo.htmlacademy.ru/">
             <h2 class="visually-hidden">Фильтр каталога</h2>
             <fieldset class="catalog-filter__group">
               <legend class="catalog-filter__title infr-title">Инфраструктура:</legend>
@@ -150,10 +150,10 @@
               <div class="range">
                 <div class="range__scale">
                   <div class="range__bar" style="left:0; width: 226px">
-                    <button class="range__toggle toggle__min" type="button">
+                    <button class="range__toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range__toggle toggle__max" type="button">
+                    <button class="range__toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -197,8 +197,6 @@
               </li>
             </ul>
           </header>
-
-
           <ul class="catalog-list list-reset">
             <li class="catalog-item">
               <a href="#" class="catalog-item__img">
@@ -308,6 +306,7 @@
           <p class="subscribe-page__descr descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label for="email">
+              <span class="visually-hidden">Введите email</span>
               <input class="subscribe-form__input input" type="email" name="email" id="email" placeholder="Ваш e-mail">
             </label>
             <button class="subscribe-form__button btn" type="submit">Подписаться</button>

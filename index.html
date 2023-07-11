@@ -142,6 +142,7 @@
           <p class="subscribe-descr__light descr">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
             <label for="email">
+              <span class="visually-hidden">Введите email</span>
               <input class="subscribe-form__input input" type="email" name="email" id="email" placeholder="Ваш e-mail">
             </label>
             <button class="subscribe-form__button btn" type="submit">Подписаться</button>
@@ -186,21 +187,21 @@
             </button>
           </div>
           <form class="modal-form" method="post" action="https://echo.htmlacademy.ru/">
-            <label for="arrival" class="modal-form__label label-arrival">
+            <label for="arrival" class="modal-form__label">
               <span class="modal-form__text text-size">Дата заезда:</span>
-              <input type="text" name="arrival" id="arrival" class="modal-form__input" value="27 апреля 2020"
+              <input type="text" name="arrival" id="arrival" class="modal-form__input date-icon" value="27 апреля 2020"
                 placeholder="Укажите дату">
-              <span class="date-state input-invalid">Мы не можем отправить вас в прошлое.</span>
+              <span class="input-state input-invalid">Мы не можем отправить вас в прошлое.</span>
             </label>
             <label for="departure" class="modal-form__label label-departure">
               <span class="modal-form__text text-size">Дата выезда:</span>
-              <input type="text" name="departure" id="departure" class="modal-form__input" value="1 сентября 2023"
-                placeholder="Укажите дату">
-              <span class="date-state input-valid">На эти даты есть свободные номера. Пока есть.</span>
+              <input type="text" name="departure" id="departure" class="modal-form__input date-icon"
+                value="1 сентября 2023" placeholder="Укажите дату">
+              <span class="input-state input-valid">На эти даты есть свободные номера. Пока есть.</span>
             </label>
             <div class="form-wrapper">
               <div class="wrapper-label">
-                <label for="adult" class="modal-form__label label-adult">
+                <label for="adult" class="modal-form__label">
                   <span class="modal-form__text text-size">Взрослые:</span>
                 </label>
                 <button class="modal-form__btn button-minus" type="button">
